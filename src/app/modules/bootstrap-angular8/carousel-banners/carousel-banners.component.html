@@ -3,12 +3,12 @@
 	<div class="bd-example">
 		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
-			<li *ngFor="let bannerInfo of bannerInfos; let i=index" data-target="#carouselExampleCaptions" data-slide-to="0"
+			<li *ngFor="let bannerInfo of bannerInfos; let i=index" data-target="#carouselExampleCaptions" [attr.data-slide-to]="i"
 				[ngClass]="{active: i === 1 }"></li>
 		  </ol>
 		  <div class="carousel-inner">
 			<div *ngFor="let bannerInfo of bannerInfos; let i=index" class="carousel-item"
-				[ngClass]="{active: i === 1 }" data-interval="2000" data-interval="{{bannerInfo.duration || 5000}}">
+				[ngClass]="{active: i === 1 }" [attr.data-interval]="bannerInfo.duration || 5000">
 			  <img [src]="bannerInfo.src" class="d-block w-100" [alt]="bannerInfo.alt">
 			  <div class="carousel-caption d-none d-md-block">
 				<h5>{{bannerInfo.title}}</h5>
