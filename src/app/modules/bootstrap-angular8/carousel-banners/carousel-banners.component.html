@@ -1,0 +1,29 @@
+<p>carousel-banners works!</p>
+<div class='carousel-banners-root'>
+	<div class="bd-example">
+		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+			<li *ngFor="let bannerInfo of bannerInfos; let i=index" data-target="#carouselExampleCaptions" data-slide-to="0"
+				[ngClass]="{active: i === 1 }"></li>
+		  </ol>
+		  <div class="carousel-inner">
+			<div *ngFor="let bannerInfo of bannerInfos; let i=index" class="carousel-item"
+				[ngClass]="{active: i === 1 }" data-interval="2000" data-interval="{{bannerInfo.duration || 5000}}">
+			  <img [src]="bannerInfo.src" class="d-block w-100" [alt]="bannerInfo.alt">
+			  <div class="carousel-caption d-none d-md-block">
+				<h5>{{bannerInfo.title}}</h5>
+				<p>{{bannerInfo.subtitle}}</p>
+			  </div>
+			</div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+	  </div>
+</div>
