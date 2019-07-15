@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.confidencesolutions.sibmanaus",
+    "sha256_cert_fingerprints": ["26:A3:09:EB:BA:1F:E3:09:8F:FC:61:4A:35:FB:FE:3E:C9:A1:90:EB:5E:A5:A6:90:F2:45:F4:DE:24:A2:F8:88"]
+  }
+}]

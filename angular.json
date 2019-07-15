@@ -23,14 +23,31 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "extractCss": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/_config.yml",
+              {
+                "input": "src/assets/",
+                "output": "/.well-known/",
+                "glob": "assetlinks.json"
+              }
             ],
             "styles": [
-              "src/bootstrap.scss",
-              "src/styles.scss"
+              {
+                "input": "src/bootstrap.scss",
+                "lazy": true,
+                "inject": false,
+                "bundleName": "bootstrap-theme"
+              },
+              {
+                "input": "src/styles.scss",
+                "lazy": true,
+                "inject": false,
+                "bundleName": "style"
+              }
             ],
             "scripts": []
           },

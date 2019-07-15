@@ -1,8 +1,8 @@
 {
-  "name": "portal-sib",
-  "short_name": "portal-sib",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "SIB Manaus",
+  "short_name": "SIB Manaus",
+  "theme_color": "#52CCA3",
+  "background_color": "#09424A",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
