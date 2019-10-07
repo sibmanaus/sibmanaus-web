@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+declare const require: any;
+
+require('bootstrap');
 
 @Component({
   selector: 'app-root',
@@ -7,4 +12,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portal-sib';
+
+  constructor(router: Router) {
+
+  }
 }

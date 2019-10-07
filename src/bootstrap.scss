@@ -1,0 +1,37 @@
+// Include all of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// ---> Opções de Cores
+// #52CDA4 Verde 1
+// #A5CE52 Verde 2
+// #1593d5 Azul site
+// #09424A Azul Escuro
+// #B4D2D2 Cinza azulado
+// #FFFFFF Branco
+// #000000 Preto
+
+// ----> Análogas
+// #52CCA3 Verde Principal
+// #A5CE52 Verde Primário
+// #4FE359 VErde Secundário
+// #5E76DB Azul primário
+// #4FBEE3 Azul Secundário
+
+// Primary
+// Secondary
+// Success
+// Danger
+// Warning
+// Info
+// Light
+// Dark
+
+$theme-colors: (
+  "primary": #52CCA3,
+  "secondary": #4FE359,
+  "accent": #5E76DB,
+  "danger": #ff4136,
+  "success": #A5CE52,
+  "fontprimary": "#000000",
+  "fontsecondary": "#09424A",
+);

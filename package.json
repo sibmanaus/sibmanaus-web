@@ -7,7 +7,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "gen-report": "ng build --prod --stats-json",
+    "open-report:es5": "webpack-bundle-analyzer dist/portal-sib/stats-es5.json",
+    "open-report": "webpack-bundle-analyzer dist/portal-sib/stats-es2015.json"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +21,12 @@
     "@angular/forms": "~8.2.9",
     "@angular/platform-browser": "~8.2.9",
     "@angular/platform-browser-dynamic": "~8.2.9",
+    "@angular/pwa": "^0.803.8",
     "@angular/router": "~8.2.9",
+    "@angular/service-worker": "~8.2.9",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
@@ -42,6 +50,10 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-bundle-analyzer": "^3.3.2"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.0.7"
   }
 }
