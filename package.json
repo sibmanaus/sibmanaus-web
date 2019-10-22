@@ -24,6 +24,7 @@
     "@angular/pwa": "^0.803.8",
     "@angular/router": "~8.2.9",
     "@angular/service-worker": "~8.2.9",
+    "angular8-translator": "0.0.4",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
