@@ -8,10 +8,14 @@
 		  <div class="carousel-inner">
 			<div *ngFor="let bannerInfo of bannerInfos; let i=index" class="carousel-item"
 				[ngClass]="{active: i === 1 }" [attr.data-interval]="bannerInfo.duration || 5000">
-			  <img [src]="bannerInfo.src" class="d-block w-100" [alt]="bannerInfo.alt">
-			  <div class="carousel-caption d-none d-md-block">
-				<h5>{{bannerInfo.title}}</h5>
-				<p>{{bannerInfo.subtitle}}</p>
+			  <img [src]="bannerInfo.src" class="d-block w-100 image-background" [alt]="bannerInfo.alt">
+			  <div class="carousel-caption d-none d-md-block banners-infos">
+				<h5 *ngIf='bannerInfo.subject' class='d-inline'>{{bannerInfo.subject}}</h5>
+				<h3 *ngIf='bannerInfo.title'>{{bannerInfo.title}}</h3>
+				<p *ngIf='bannerInfo.subtitle'>{{bannerInfo.subtitle}}</p>
+				<button *ngIf='bannerInfo.link' class="btn btn-outline-light btn-lg clickable" (click)='openLink(bannerInfo.link.redirect, bannerInfo.link.url)'>
+					{{ bannerInfo.link.text || "Read More"}}
+				</button>
 			  </div>
 			</div>
 		  </div>

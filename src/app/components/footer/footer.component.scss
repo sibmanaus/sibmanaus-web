@@ -1,0 +1,12 @@
+span {
+    font-size: 11pt;
+    @media screen and (max-width: 992px) {
+        margin: 0 !important;
+    }
+}
+
+footer {
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+}

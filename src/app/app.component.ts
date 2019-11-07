@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 
 declare const require: any;
 
@@ -13,7 +12,5 @@ require('bootstrap');
 export class AppComponent {
   title = 'portal-sib';
 
-  constructor(router: Router) {
-
-  }
+  constructor( ) { }
 }

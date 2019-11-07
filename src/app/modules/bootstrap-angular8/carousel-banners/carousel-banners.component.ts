@@ -1,11 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
+declare const window: Window;
 
 export interface BannersInfo {
   src: string;
   alt?: string;
+  subject?: string;
   title?: string;
   subtitle?: string;
   duration?: number;
+  link?: { redirect?: boolean, url: string, text?: string };
 }
 
 @Component({
@@ -16,9 +21,16 @@ export interface BannersInfo {
 export class CarouselBannersComponent implements OnInit {
   @Input() bannerInfos: BannersInfo[];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  openLink(redirect = false, url: string) {
+    if (redirect) {
+      window.open(url, '_blank');
+    } else {
+      this.router.navigate([url]);
+    }
+  }
 }

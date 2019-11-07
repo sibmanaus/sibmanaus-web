@@ -5,12 +5,15 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './modules/app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { BootstrapAngular8Module } from './modules/bootstrap-angular8/bootstrap-angular8.module';
 
 import { AppComponent } from './app.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { BootstrapAngular8Module } from './modules/bootstrap-angular8/bootstrap-angular8.module';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MapsComponent } from './components/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     HomePageComponent,
     NotFoundPageComponent,
     AboutPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +31,8 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
     BootstrapAngular8Module,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [
     AppComponent,
   ],
