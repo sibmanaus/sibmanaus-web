@@ -3,7 +3,31 @@
     object-fit: contain;
 }
 
+.carousel-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-caption {
+    @media screen and (max-width: 380px) {
+        bottom: 5px;
+    }
+}
+
 .banners-infos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+        padding: 10px 0px;
+    }
+    @media screen and (max-width: 540px) {
+        padding: 0px 0px;
+    }
+
     h5 {
         text-transform: uppercase;
         padding-bottom: 2px;
@@ -14,15 +38,56 @@
         border-color: RGBA(0,0,0,1);
         border-radius: 0px;
         border-bottom: 3px solid #fff;
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+            border-bottom: 2px solid #fff;
+        }
+        @media screen and (max-width: 540px) {
+            font-size: 12px;
+            border-bottom: 1px solid #fff;
+        }
+        @media screen and (max-width: 260px) {
+            font-size: 10px;
+            border-bottom: none;
+        }
     }
 
     h3 {
         font-size: 36px;
         margin-top: 10px;
+        @media screen and (max-width: 1024px) {
+            font-size: 28px;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 540px) {
+            font-size: 14px;
+            margin-top: 3px;
+        }
+        @media screen and (max-width: 380px) {
+            font-size: 10px;
+            margin-top: 2px;
+        }
+        @media screen and (max-width: 260px) {
+            font-size: 9px;
+            margin-top: 0px;
+        }
     }
 
     p {
         margin-top: 10px;
+        @media screen and (max-width: 1024px) {
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            margin-top: 3px;
+        }
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
     }
 
     button {
@@ -30,5 +95,34 @@
         min-width: 120px;
         margin-top: 30px;
         margin-bottom: 20px;
+        @media screen and (max-width: 1024px) {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
+        @media screen and (max-width: 540px) {
+            font-size: 12px;
+            padding: 2px 0px;
+            margin-bottom: 0px;
+            margin-top: 2px;
+        }
+        @media screen and (max-width: 380px) {
+            padding: 1px 0px;
+            margin-bottom: 0px;
+            margin-top: 2px;
+        }
+        @media screen and (max-width: 260px) {
+            font-size: 9px;
+            margin-top: 0px;
+        }
+    }
+}
+
+ol, ul, li {
+    margin-bottom: 0px !important;
+    @media screen and (max-width: 380px) {
+        display: none;
     }
 }

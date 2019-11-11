@@ -6,6 +6,7 @@ span {
 }
 
 footer {
+    color: var(--fontprimary);
     @media screen and (max-width: 992px) {
         flex-direction: column;
     }

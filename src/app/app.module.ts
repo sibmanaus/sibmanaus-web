@@ -1,3 +1,4 @@
+import { ThemeManagerService } from './modules/theme-manager/theme-manager.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,10 +11,10 @@ import { AppComponent } from './app.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
-import { BootstrapAngular8Module } from './modules/bootstrap-angular8/bootstrap-angular8.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MapsComponent } from './components/maps/maps.component';
+import { CarouselBannersComponent } from './modules/bootstrap-angular8/carousel-banners/carousel-banners.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +25,16 @@ import { MapsComponent } from './components/maps/maps.component';
     HeaderComponent,
     FooterComponent,
     MapsComponent,
+    CarouselBannersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BootstrapAngular8Module,
+    // BootstrapAngular8Module,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
+    ThemeManagerService,
   ],
   bootstrap: [
     AppComponent,

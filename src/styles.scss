@@ -6,3 +6,12 @@
 body {
     min-height: 100vh;
 }
+
+.set-bgprimary {
+    background-color: var(--bgprimary);
+}
+
+.set-colorfontprimary {
+    color: var(--fontprimary);
+    fill: var(--fontprimary);
+}

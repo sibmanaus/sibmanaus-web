@@ -10,8 +10,8 @@ export class HomePageComponent implements OnInit {
   public banners: BannersInfo[] = [
     {
       src: 'assets/banners/full1.jpeg',
-      duration: 4000,
-      subject: 'Podcast',
+      duration: 7000,
+      subject: 'Pitstop Podcast',
       title: 'Toda semana, uma mensagem especial para você',
       link: {
         redirect: true,
@@ -21,7 +21,7 @@ export class HomePageComponent implements OnInit {
     },
     {
       src: 'assets/banners/full2.jpg',
-      duration: 4000,
+      duration: 7000,
       subject: 'Crise na Venezuela',
       title: 'Abrigo OASIS: Um ano de trabalho e muita gratidão',
       subtitle: 'O projeto OASIS completou um ano de existência, abrigando refugiados venezuelanos e acompanhando as famílias.',
@@ -33,7 +33,7 @@ export class HomePageComponent implements OnInit {
     },
     {
       src: 'assets/banners/full3.jpg',
-      duration: 4000,
+      duration: 7000,
       subject: 'Versículo do dia',
       title: 'Respondeu Jesus: "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim.',
       subtitle: 'João 14.6',

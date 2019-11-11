@@ -2,9 +2,16 @@ section {
     height: 440px;
     width: 100%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bgprimary);
 }
 
 iframe {
     height: 400px;
     width: 100%;
+}
+
+h2 {
+    color: var(--fontprimary);
 }

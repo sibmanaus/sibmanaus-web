@@ -1,3 +1,4 @@
+import { ThemeManagerService } from './modules/theme-manager/theme-manager.service';
 import { Component } from '@angular/core';
 
 declare const require: any;
@@ -12,5 +13,7 @@ require('bootstrap');
 export class AppComponent {
   title = 'portal-sib';
 
-  constructor( ) { }
+  constructor(private themeManager: ThemeManagerService) {
+    themeManager.theme = themeManager.lightTheme;
+  }
 }

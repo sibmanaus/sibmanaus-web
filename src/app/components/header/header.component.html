@@ -1,6 +1,9 @@
-<header class='navbar navbar-expand-md navbar-light bg-light'>
+<header class='navbar navbar-expand-md' [ngClass]='themeClasses'>
   <a class='navbar-brand clickable' routerLink='/'>
-    <img class='d-inline-block align-top brand' src='../../../assets/logo.png' alt='SIB Manaus' />
+    <img *ngIf='themeManager.theme.name == "light"' class='d-inline-block align-top brand' alt='SIB Manaus'
+      src='../../../assets/enterprise/logo.png' />
+    <img *ngIf='themeManager.theme.name == "dark"' class='d-inline-block align-top brand' alt='SIB Manaus'
+      src='../../../assets/enterprise/logo-dark.png' />
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,5 +21,13 @@
         <a class="nav-link">CONTATO</a>
       </li>
     </ul>
+    <a>
+      <button *ngIf='themeManager.theme.name == "light"' class='theme-button' (click)='changeTheme("dark")'>
+        <img class='set-colorfontprimary' src='./../../../assets/moon-solid.svg' width='40px'>
+      </button>
+      <button *ngIf='themeManager.theme.name == "dark"' class='theme-button' (click)='changeTheme("light")'>
+          <img class='set-colorfontprimary' src='./../../../assets/sun-solid.svg' width='40px'>
+        </button>
+    </a>
   </nav>
 </header>

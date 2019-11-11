@@ -1,6 +1,6 @@
 <div class='carousel-banners-root'>
 	<div class="bd-example">
-		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
 		  <ol class="carousel-indicators">
 			<li *ngFor="let bannerInfo of bannerInfos; let i=index" data-target="#carouselExampleCaptions" [attr.data-slide-to]="i"
 				[ngClass]="{active: i === 1 }"></li>
@@ -9,7 +9,7 @@
 			<div *ngFor="let bannerInfo of bannerInfos; let i=index" class="carousel-item"
 				[ngClass]="{active: i === 1 }" [attr.data-interval]="bannerInfo.duration || 5000">
 			  <img [src]="bannerInfo.src" class="d-block w-100 image-background" [alt]="bannerInfo.alt">
-			  <div class="carousel-caption d-none d-md-block banners-infos">
+			  <div class="carousel-caption d-block banners-infos">
 				<h5 *ngIf='bannerInfo.subject' class='d-inline'>{{bannerInfo.subject}}</h5>
 				<h3 *ngIf='bannerInfo.title'>{{bannerInfo.title}}</h3>
 				<p *ngIf='bannerInfo.subtitle'>{{bannerInfo.subtitle}}</p>
